@@ -261,6 +261,12 @@ export function useDataSource(
       }
 
       const res = await api(params);
+      if (unref(propsRef).isTreeTable) {
+        res.map((item) => {
+          return deleteNullChildren(item);
+        });
+      }
+
       rawDataSourceRef.value = res;
 
       const isArrayResult = Array.isArray(res);
@@ -305,6 +311,18 @@ export function useDataSource(
     } finally {
       setLoading(false);
     }
+  }
+
+  function deleteNullChildren(item, disabled = false, level = 0) {
+    item.disabled = false; // (item.status === 0 || disabled) && level !== 0;
+    if (item?.children?.length == 0) {
+      delete item.children;
+    } else if (item?.children?.length > 0) {
+      item.children.map((child) =>
+        deleteNullChildren(child, item.status === 0 || disabled, level + 1)
+      );
+    }
+    return item;
   }
 
   function setTableData<T = Recordable>(values: T[]) {

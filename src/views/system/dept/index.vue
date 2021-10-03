@@ -1,5 +1,5 @@
 <template>
-  <div class="m-4">
+  <div>
     <BasicTable @register="registerTable" @fetch-success="onFetchSuccess">
       <template #toolbar>
         <a-button type="primary" @click="handleCreate"> 新增部门 </a-button>

@@ -1,5 +1,5 @@
 <template>
-  <div class="m-4">
+  <div>
     <BasicTable @register="registerTable">
       <!--      <template #toolbar>-->
       <!--        <a-button type="primary" @click="handleCreate"> 模型管理 </a-button>-->
