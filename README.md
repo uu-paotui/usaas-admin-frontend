@@ -33,3 +33,21 @@ yarn serve
 ```js
 yarn build
 ```
+
+## 预览图片
+系统概览
+![系统概览](./screenshot/demo1.png)
+
+菜单管理
+![菜单管理](./screenshot/demo2.png)
+
+角色管理
+![角色管理](./screenshot/demo3.png)
+
+系统配置
+![系统配置](./screenshot/系统配置.png)
+
+配置项系统维护
+![配置项系统维护](./screenshot/配置维护.png)
+
+
