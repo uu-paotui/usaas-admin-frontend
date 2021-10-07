@@ -7,16 +7,16 @@
 
 基于vben(Vue3+、Vite、Ant Design),以插件形式开箱即用.
 
-后端基于php8+swoole+hyperf2.2
+后端基于PHP8+Swoole+Hyperf2.2
 
 ## 安装vite
 ```js
-  yarn add global vite
+yarn add global vite
 ```
 
 ## 安装项目
 ```js
-  git cline https://github.com/uu-paotui/usaas-admin-frontend
+git cline https://github.com/uu-paotui/usaas-admin-frontend
 ```
 
 ## 安装依赖
