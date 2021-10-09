@@ -16,7 +16,7 @@ yarn add global vite
 
 ## 安装项目
 ```js
-git cline https://github.com/uu-paotui/usaas-admin-frontend
+git clone https://github.com/uu-paotui/usaas-admin-frontend
 ```
 
 ## 安装依赖
