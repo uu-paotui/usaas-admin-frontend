@@ -1,0 +1,33 @@
+.sider--wrapper {
+  padding: 20px;
+  &__item {
+    margin-bottom: 15px;
+    &_title {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    &_element {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .chosen {
+         border: solid 1px #3089dc !important;
+      }
+      &__label {
+        width: 48%;
+        height: 35px;
+        background-color: #f5f7fa;
+        color: #333;
+        margin-bottom: 10px;
+        cursor: move;
+        line-height: 35px;
+        text-align: center;
+        border: 1px solid #f5f7fa;
+        &:hover {
+          border: 1px dashed #2460ff;
+          color: #2460ff;
+        }
+      }
+    }
+  }
+}

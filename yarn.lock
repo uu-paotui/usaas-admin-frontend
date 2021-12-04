@@ -1438,6 +1438,28 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
+"@lljj/vjsf-utils@1.9.5":
+  version "1.9.5"
+  resolved "https://registry.yarnpkg.com/@lljj/vjsf-utils/-/vjsf-utils-1.9.5.tgz#51a723acf623b9a845ec0bd854760ad5239e4803"
+  integrity sha512-zoK6Dphw1G+uygbs4gKULOumwr+buawlYCkXFa2yAbXva3jdy+C7JVm+o8fNONsTOaufqq6ooDKsbYOBEGQ1Kw==
+  dependencies:
+    ajv "^6.10.2"
+
+"@lljj/vue3-form-ant@^1.9.5":
+  version "1.9.5"
+  resolved "https://registry.yarnpkg.com/@lljj/vue3-form-ant/-/vue3-form-ant-1.9.5.tgz#4e9cd39a4b396e968059a983245a14f4e9ef99de"
+  integrity sha512-4KiBPY0uibV2lZJ26K64oB2+is2PegBsN1YwZJhDvE7q/nq2ynPFfoVCv20e9S4ca/bUdgZ4knv21T1aiw7tKA==
+  dependencies:
+    "@lljj/vjsf-utils" "1.9.5"
+    "@lljj/vue3-form-core" "1.9.5"
+
+"@lljj/vue3-form-core@1.9.5":
+  version "1.9.5"
+  resolved "https://registry.yarnpkg.com/@lljj/vue3-form-core/-/vue3-form-core-1.9.5.tgz#372ffff4e0b0fe1f6fb0d60f0bd065e68e769f09"
+  integrity sha512-6025MlMmnea/n7/qqykI4gUVvN6tlXT1xu+AvhiS4vUnY4fu/XIKbGZCZWklE8Ne6/YNElczbQYb1DMtXvgYuQ==
+  dependencies:
+    "@lljj/vjsf-utils" "1.9.5"
+
 "@logicflow/core@^0.6.16", "@logicflow/core@^0.6.9":
   version "0.6.16"
   resolved "https://registry.nlark.com/@logicflow/core/download/@logicflow/core-0.6.16.tgz#1a64a573b2ee826578bbea12fa330d990dbc1e08"
@@ -2372,7 +2394,7 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-ajv@^6.10.0, ajv@^6.12.4:
+ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.4:
   version "6.12.6"
   resolved "https://registry.nlark.com/ajv/download/ajv-6.12.6.tgz?cache=0&sync_timestamp=1631470912358&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fajv%2Fdownload%2Fajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
   integrity sha1-uvWmLoArB9l3A0WG+MO69a3ybfQ=
@@ -9817,6 +9839,11 @@ sort-keys@^2.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
+sortablejs@1.10.2:
+  version "1.10.2"
+  resolved "https://r.cnpmjs.org/sortablejs/download/sortablejs-1.10.2.tgz#6e40364d913f98b85a14f6678f92b5c1221f5290"
+  integrity sha1-bkA2TZE/mLhaFPZnj5K1wSIfUpA=
+
 sortablejs@^1.14.0:
   version "1.14.0"
   resolved "https://registry.nlark.com/sortablejs/download/sortablejs-1.14.0.tgz#6d2e17ccbdb25f464734df621d4f35d4ab35b3d8"
@@ -11393,6 +11420,13 @@ vue@3.2.2:
     "@vue/compiler-dom" "3.2.2"
     "@vue/runtime-dom" "3.2.2"
     "@vue/shared" "3.2.2"
+
+vuedraggable@^2.24.3:
+  version "2.24.3"
+  resolved "https://r.cnpmjs.org/vuedraggable/download/vuedraggable-2.24.3.tgz#43c93849b746a24ce503e123d5b259c701ba0d19"
+  integrity sha1-Q8k4SbdGokzlA+Ej1bJZxwG6DRk=
+  dependencies:
+    sortablejs "1.10.2"
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"

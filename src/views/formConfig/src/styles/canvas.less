@@ -1,0 +1,67 @@
+.design {
+  padding: 12px;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+&--header {
+  padding-bottom: 12px;
+  overflow: hidden;
+  .right {
+    float: right;
+  }
+}
+&--body {
+  position: relative;
+  background-color: rgb(246, 245, 246);
+  padding: 12px;
+  height: 94%;
+  overflow: auto;
+  &_preview {
+    background-color: #fff;
+  }
+  .placeholder {
+    position: absolute;
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .draggle--form {
+    &_item {
+      position: relative;
+      padding: 25px 8px 10px;
+      border: 1px dashed #bbb;
+      margin-bottom: 10px;
+      cursor: pointer;
+      background-color: #fff;
+      &_active {
+        border: 2px solid #2460ff;
+      }
+      .field {
+        position: absolute;
+        right: 8px;
+        top: -2px;
+        color: #2460ff;
+      }
+      .bottom {
+        width: 60px;
+        background-color: #2460ff;
+        border-top-left-radius: 20px;
+        padding-top: 7px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        .copy,
+        .delete {
+          font-size: 16px;
+          color: #fff;
+          margin-left: 15px;
+          cursor: pointer;
+        }
+        .delete {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+}
