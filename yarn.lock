@@ -1438,6 +1438,28 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
+"@lljj/vjsf-utils@1.9.5":
+  version "1.9.5"
+  resolved "https://rg.cnpmjs.org/@lljj/vjsf-utils/download/@lljj/vjsf-utils-1.9.5.tgz#51a723acf623b9a845ec0bd854760ad5239e4803"
+  integrity sha512-zoK6Dphw1G+uygbs4gKULOumwr+buawlYCkXFa2yAbXva3jdy+C7JVm+o8fNONsTOaufqq6ooDKsbYOBEGQ1Kw==
+  dependencies:
+    ajv "^6.10.2"
+
+"@lljj/vue3-form-ant@^1.10.0":
+  version "1.10.0"
+  resolved "https://rg.cnpmjs.org/@lljj/vue3-form-ant/download/@lljj/vue3-form-ant-1.10.0.tgz#c906ec978471af8e5f187a91ea69f361e6fe2fe7"
+  integrity sha512-/jUNP3IsWDDFaaUlSYvYTrvxsifNRD0QegnBsgpsKgkqdzV2JQMFgip5dx6fEqsieLcU/mvVjQ4OODS5QbFEFg==
+  dependencies:
+    "@lljj/vjsf-utils" "1.9.5"
+    "@lljj/vue3-form-core" "1.10.0"
+
+"@lljj/vue3-form-core@1.10.0":
+  version "1.10.0"
+  resolved "https://rg.cnpmjs.org/@lljj/vue3-form-core/download/@lljj/vue3-form-core-1.10.0.tgz#9bd53d784b738c9ffce74bd6273ee63cdd3e0b14"
+  integrity sha512-YfgaSVH/Ifr4ipLivU/L4VZ+NzSM+vKPSvxoBxl+92RCcX0vGTWSIXWvIH7wU8ExDp7L746u5yIvT6tylF2BYg==
+  dependencies:
+    "@lljj/vjsf-utils" "1.9.5"
+
 "@logicflow/core@^0.6.16", "@logicflow/core@^0.6.9":
   version "0.6.16"
   resolved "https://registry.nlark.com/@logicflow/core/download/@logicflow/core-0.6.16.tgz#1a64a573b2ee826578bbea12fa330d990dbc1e08"
@@ -2372,7 +2394,7 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-ajv@^6.10.0, ajv@^6.12.4:
+ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.4:
   version "6.12.6"
   resolved "https://registry.nlark.com/ajv/download/ajv-6.12.6.tgz?cache=0&sync_timestamp=1631470912358&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fajv%2Fdownload%2Fajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
   integrity sha1-uvWmLoArB9l3A0WG+MO69a3ybfQ=

@@ -120,7 +120,7 @@
 
   const formData = reactive({
     account: 'admin',
-    password: 'string',
+    password: '123456',
   });
 
   const { validForm } = useFormValid(formRef);
