@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="m-4 p-4 bg-white">
     <VueForm
       v-model="formData"
       :schema="schema"

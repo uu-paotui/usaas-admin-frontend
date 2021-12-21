@@ -136,12 +136,12 @@ export class VAxios {
         formData.append(key, params.data[key]);
       });
     }
-    formData.append(params.name || 'file', params.file, params.filename);
     const customParams = omit(params, 'file', 'filename', 'file');
 
     Object.keys(customParams).forEach((key) => {
       formData.append(key, customParams[key]);
     });
+    formData.append(params.name || 'file', params.file, params.filename);
 
     return this.axiosInstance.request<T>({
       ...config,
@@ -150,6 +150,8 @@ export class VAxios {
       headers: {
         'Content-type': ContentTypeEnum.FORM_DATA,
         ignoreCancelToken: true,
+        returnDirect: true,
+        rowData: true
       },
     });
   }

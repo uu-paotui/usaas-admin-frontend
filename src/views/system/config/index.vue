@@ -1,3 +1,10 @@
+<!--
+ * @Author: wendy
+ * @LastEditors: wendy
+ * @Date: 2021-11-22 15:40:36
+ * @LastEditTime: 2021-12-16 18:23:16
+ * @Description: 
+-->
 <template>
   <div class="m-4 p-4 bg-white">
     <ATabs default-active-key="1" @change="selectTab">
@@ -7,11 +14,12 @@
   </div>
 </template>
 <script lang="ts">
-  import { defineComponent, ref, computed, unref, onMounted } from 'vue';
+  import { defineComponent, ref, computed, unref, onMounted, reactive } from 'vue';
   import { BasicForm, FormSchema, useForm } from '/@/components/Form/index';
   import { TreeItem } from '/@/components/Tree';
   import { apiPostConfig, apiGetConfig } from '/@/api/sys/system';
   import { useMessage } from '/@/hooks/web/useMessage';
+  import { uploadFileToOss, fetchOssToken } from '/@/api/sys/upload';
 
   export default defineComponent({
     name: 'ConfigIndex',
@@ -24,6 +32,7 @@
       const treeData = ref<TreeItem[]>([]);
       const formConfigSchema = ref<any>([]);
       const formSchema = ref<any>([]);
+      let uploadParams = reactive({});
       const [registerForm, { validate, setFieldsValue }] = useForm({
         labelWidth: 90,
         schemas: formSchema,
@@ -38,10 +47,33 @@
         tabId.value = tab;
         const config = formConfigSchema.value[tab] || {};
         formSchema.value = (config.items || []) as FormSchema[];
+        // 为上传组件配置props
+        formSchema.value.map(item => {
+          if (item.component === "Upload") {
+            item.componentProps = {
+              api: uploadFileToOss,
+              uploadParams
+            }
+          }
+        })
         tabSelect.value = config.key || 'system';
         setFieldsValue({
           ...(config.values || []),
         });
+      }
+
+      // 获取 oss token
+      const fetchOSSToken = async () => {
+        const res = await fetchOssToken();
+        const { accessid, policy, callback, signature, dir } = res;
+        uploadParams = {
+          OSSAccessKeyId: accessid,
+          policy: policy,
+          callback: callback,
+          signature: signature,
+          key: dir,
+          success_action_status: "200",
+        }
       }
 
       async function handleSubmit() {
@@ -59,6 +91,7 @@
       }
 
       onMounted(async () => {
+        await fetchOSSToken();
         await apiGetConfig().then((res) => {
           formConfigSchema.value = res;
           selectTab(0);
@@ -72,6 +105,8 @@
         getTitle,
         handleSubmit,
         treeData,
+        fetchOSSToken,
+        uploadParams,
       };
     },
   });

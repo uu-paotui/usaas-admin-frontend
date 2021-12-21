@@ -2,12 +2,12 @@
  * @Author: wendy
  * @LastEditors: wendy
  * @Date: 2021-12-06 15:41:37
- * @LastEditTime: 2021-12-14 09:13:18
+ * @LastEditTime: 2021-12-14 16:39:03
  * @Description: 表单设计器
 -->
 <template>
   <FramePage
-    frameSrc="http://39.101.133.238:28000/schema-generator.html#/index"
+    frameSrc="http://192.168.10.209:8800/schema-generator.html#/index"
   />
 </template>
 <script>
